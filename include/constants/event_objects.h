@@ -240,13 +240,37 @@
 #define OBJ_EVENT_GFX_LINK_RS_MAY                236
 #define OBJ_EVENT_GFX_LUGIA                      237
 #define OBJ_EVENT_GFX_HOOH                       238
+#define OBJ_EVENT_GFX_FRLG_WOMAN_1               241
+#define OBJ_EVENT_GFX_FRLG_WOMAN_2               242
+#define OBJ_EVENT_GFX_FRLG_WOMAN_3               243
+#define OBJ_EVENT_GFX_FRLG_FAT_MAN               244
+#define OBJ_EVENT_GFX_FRLG_SCIENTIST             245
+#define OBJ_EVENT_GFX_PROF_OAK                   246
+#define OBJ_EVENT_GFX_FRLG_MOM                   247
+#define OBJ_EVENT_GFX_BLUE                       248
+#define OBJ_EVENT_GFX_WORKER_F                   249
+#define OBJ_EVENT_GFX_FRLG_CLERK                 250
+#define OBJ_EVENT_GFX_FRLG_BOY                   251
+#define OBJ_EVENT_GFX_DAISY                      252
+#define OBJ_EVENT_GFX_FRLG_YOUNGSTER             253
+#define OBJ_EVENT_GFX_FRLG_OLD_MAN_1             254
+#define OBJ_EVENT_GFX_FRLG_OLD_MAN_LYING_DOWN    255
+#define OBJ_EVENT_GFX_BALDING_MAN                256
+#define OBJ_EVENT_GFX_FRLG_LITTLE_GIRL           257
+#define OBJ_EVENT_GFX_FRLG_NURSE                 258
+#define OBJ_EVENT_GFX_FRLG_GENTLEMAN             259
+#define OBJ_EVENT_GFX_FRLG_LASS                  260
+#define OBJ_EVENT_GFX_POKEDEX                    261
+#define OBJ_EVENT_GFX_TOWN_MAP                   262
+#define OBJ_EVENT_GFX_SPEAROW                    263
+#define OBJ_EVENT_GFX_CUT_TREE                   264
 #define OBJ_EVENT_GFX_POKE_BALL                  239
 #define OBJ_EVENT_GFX_OW_MON                     240
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        241
+#define NUM_OBJ_EVENT_GFX                        5000
 
 
 // These are dynamic object gfx ids.
@@ -383,6 +407,12 @@
 #define OBJ_EVENT_PAL_TAG_RS_BRENDAN              0x1122
 #define OBJ_EVENT_PAL_TAG_RS_MAY                  0x1123
 #define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x1124
+#define OBJ_EVENT_PAL_TAG_NPC_BLUE                0x1128
+#define OBJ_EVENT_PAL_TAG_NPC_PINK                0x1129
+#define OBJ_EVENT_PAL_TAG_NPC_GREEN               0x1130
+#define OBJ_EVENT_PAL_TAG_NPC_WHITE               0x1131
+//Pokemon
+#define OBJ_EVENT_PAL_TAG_SPEAROW                 0x1132
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

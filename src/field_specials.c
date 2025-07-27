@@ -988,11 +988,9 @@ static bool32 IsBuildingPCTile(u32 tileId)
 
 static bool32 IsPlayerHousePCTile(u32 tileId)
 {
-    return gMapHeader.mapLayout->secondaryTileset == &gTileset_BrendansMaysHouse
-        && (tileId == METATILE_BrendansMaysHouse_BrendanPC_On
-            || tileId == METATILE_BrendansMaysHouse_BrendanPC_Off
-            || tileId == METATILE_BrendansMaysHouse_MayPC_On
-            || tileId == METATILE_BrendansMaysHouse_MayPC_Off);
+    return gMapHeader.mapLayout->secondaryTileset == &gTileset_GenericBuilding1
+        && (tileId == METATILE_GenericBuilding1_PlayersPCOn
+            || tileId == METATILE_GenericBuilding1_PlayersPCOff);
 }
 
 static bool8 IsPlayerInFrontOfPC(void)
@@ -1082,20 +1080,16 @@ static void PCTurnOnEffect_SetMetatile(s16 isScreenOn, s8 dx, s8 dy)
         // Screen is on, set it off
         if (gSpecialVar_0x8004 == PC_LOCATION_OTHER)
             metatileId = METATILE_Building_PC_Off;
-        else if (gSpecialVar_0x8004 == PC_LOCATION_BRENDANS_HOUSE)
-            metatileId = METATILE_BrendansMaysHouse_BrendanPC_Off;
-        else if (gSpecialVar_0x8004 == PC_LOCATION_MAYS_HOUSE)
-            metatileId = METATILE_BrendansMaysHouse_MayPC_Off;
+        else if (gSpecialVar_0x8004 == PC_LOCATION_REDS_HOUSE)
+            metatileId = METATILE_GenericBuilding1_PlayersPCOff;
     }
     else
     {
         // Screen is off, set it on
         if (gSpecialVar_0x8004 == PC_LOCATION_OTHER)
             metatileId = METATILE_Building_PC_On;
-        else if (gSpecialVar_0x8004 == PC_LOCATION_BRENDANS_HOUSE)
-            metatileId = METATILE_BrendansMaysHouse_BrendanPC_On;
-        else if (gSpecialVar_0x8004 == PC_LOCATION_MAYS_HOUSE)
-            metatileId = METATILE_BrendansMaysHouse_MayPC_On;
+        else if (gSpecialVar_0x8004 == PC_LOCATION_REDS_HOUSE)
+            metatileId = METATILE_GenericBuilding1_PlayersPCOn;
     }
     MapGridSetMetatileIdAt(gSaveBlock1Ptr->pos.x + dx + MAP_OFFSET, gSaveBlock1Ptr->pos.y + dy + MAP_OFFSET, metatileId | MAPGRID_COLLISION_MASK);
 }
@@ -1135,10 +1129,8 @@ static void PCTurnOffEffect(void)
 
     if (gSpecialVar_0x8004 == PC_LOCATION_OTHER)
         metatileId = METATILE_Building_PC_Off;
-    else if (gSpecialVar_0x8004 == PC_LOCATION_BRENDANS_HOUSE)
-        metatileId = METATILE_BrendansMaysHouse_BrendanPC_Off;
-    else if (gSpecialVar_0x8004 == PC_LOCATION_MAYS_HOUSE)
-        metatileId = METATILE_BrendansMaysHouse_MayPC_Off;
+    else if (gSpecialVar_0x8004 == PC_LOCATION_REDS_HOUSE)
+        metatileId = METATILE_GenericBuilding1_PlayersPCOff;
 
     MapGridSetMetatileIdAt(gSaveBlock1Ptr->pos.x + dx + MAP_OFFSET, gSaveBlock1Ptr->pos.y + dy + MAP_OFFSET, metatileId | MAPGRID_COLLISION_MASK);
     DrawWholeMapView();
@@ -1454,10 +1446,10 @@ void SetShoalItemFlag(u16 unused)
     FlagSet(FLAG_SYS_SHOAL_ITEM);
 }
 
-void LoadWallyZigzagoon(void)
+void LoadOakEevee(void)
 {
     u16 monData;
-    CreateMon(&gPlayerParty[0], SPECIES_ZIGZAGOON, 7, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
+    CreateMon(&gPlayerParty[0], SPECIES_EEVEE, 4, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
     monData = TRUE;
     SetMonData(&gPlayerParty[0], MON_DATA_ABILITY_NUM, &monData);
     monData = MOVE_TACKLE;

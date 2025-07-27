@@ -1,21 +1,21 @@
 gText_WouldYouLikeToRestYourPkmn::
-	.string "Hello, and welcome to\n"
-	.string "the POKéMON CENTER.\p"
-	.string "We restore your tired POKéMON\n"
-	.string "to full health.\p"
-	.string "Would you like to rest your POKéMON?$"
+	.string "{COLOR RED}Bienvenido al Centro Pokémon\p"
+	.string "Nosotros curamos a los Pokémon\n"
+	.string "debilitados.\p"
+	.string "¿Quieres que nos ocupemos de los\n"
+	.string "Pokémon de tu equipo?$"
 
 gText_IllTakeYourPkmn::
-	.string "Okay, I'll take your POKéMON\n"
-	.string "for a few seconds.$"
+	.string "{COLOR RED}Muy bien. Ten un poco de\n"
+	.string "paciencia. No tardare mucho.$"
 
 gText_RestoredPkmnToFullHealth::
-	.string "Thank you for waiting.\p"
-	.string "We've restored your POKéMON\n"
-	.string "to full health.$"
+	.string "{COLOR RED}Gracias por esperar.\p"
+	.string "Hemos restaurado la salud\n"
+	.string "de tus Pokémon sin problemas.$"
 
 gText_WeHopeToSeeYouAgain::
-	.string "We hope to see you again!$"
+	.string "{COLOR RED}¡Vuelve siempre que quieras!$"
 
 gText_WelcomeCutShort::
 	.string "Hello, and welcome to\n"

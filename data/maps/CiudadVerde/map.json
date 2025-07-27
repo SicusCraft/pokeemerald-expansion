@@ -1,0 +1,257 @@
+{
+  "id": "MAP_CIUDAD_VERDE",
+  "name": "CiudadVerde",
+  "layout": "LAYOUT_CIUDAD_VERDE",
+  "music": "MUS_RG_PEWTER",
+  "region_map_section": "MAPSEC_VIRIDIAN_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_CITY",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_RUTA1",
+      "offset": 12,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_RUTA22",
+      "offset": 10,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_RUTA2",
+      "offset": 12,
+      "direction": "up"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FRLG_BOY",
+      "x": 16,
+      "y": 22,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CiudadVerde_EventScript_Chico",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FRLG_FAT_MAN",
+      "x": 8,
+      "y": 26,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FRLG_WOMAN_3",
+      "x": 20,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CiudadVerde_EventScript_Mujer",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FRLG_OLD_MAN_LYING_DOWN",
+      "x": 21,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CiudadVerde_EventScript_AncianoTirado",
+      "flag": "FLAG_HIDE_OLD_MAN_LYING_DOWN"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FRLG_OLD_MAN_1",
+      "x": 21,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CiudadVerde_EventScript_AncianoPocion",
+      "flag": "FLAG_HIDE_OLD_MAN_IN_VIRIDIAN_CITY"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FRLG_YOUNGSTER",
+      "x": 33,
+      "y": 26,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CiudadVerde_EventScript_Joven",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FRLG_OLD_MAN_1",
+      "x": 34,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CiudadVerde_EventScript_AncianoGimnasio",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
+      "x": 11,
+      "y": 24,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_CutTree",
+      "flag": "FLAG_TEMP_12"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
+      "x": 18,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_CutTree",
+      "flag": "FLAG_TEMP_12"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 17,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CiudadVerde_FindItem_Pocion",
+      "flag": "FLAG_HIDE_VIRIDIAN_CITY_POTION"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 25,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_CIUDAD_VERDE_CASA",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 25,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_CIUDAD_VERDE_ESCUELA",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 26,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_CIUDAD_VERDE_CENTRO_POKEMON",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 36,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_CIUDAD_VERDE_TIENDA_POKEMON",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN",
+      "var_value": "0",
+      "script": "CiudadVerde_EventScript_CaminoBloqueado"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN_POTION",
+      "var_value": "1",
+      "script": "CiudadVerde_EventScript_AncianoPocion_Derecha"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 20,
+      "y": 31,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CiudadVerde_EventScript_PistasEntrenador"
+    },
+    {
+      "type": "sign",
+      "x": 32,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
+    },
+    {
+      "type": "sign",
+      "x": 23,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CiudadVerde_EventScript_PistasEntrenador2"
+    },
+    {
+      "type": "sign",
+      "x": 20,
+      "y": 16,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CiudadVerde_EventScript_CartelDePueblo"
+    }
+  ]
+}

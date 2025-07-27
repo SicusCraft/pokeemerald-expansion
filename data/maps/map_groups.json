@@ -33,7 +33,20 @@
     "gMapGroup_IndoorRoute113",
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
-    "gMapGroup_IndoorRoute124"
+    "gMapGroup_IndoorRoute124",
+    "gMapGroup_IndoorPallet",
+    "gMapGroup_IndoorViridian",
+    "gMapGroup_IndoorRoute2",
+    "gMapGroup_IndoorRoute5",
+    "gMapGroup_IndoorRoute6",
+    "gMapGroup_IndoorRoute7",
+    "gMapGroup_IndoorRoute8",
+    "gMapGroup_IndoorRoute11",
+    "gMapGroup_IndoorRoute12",
+    "gMapGroup_IndoorRoute15",
+    "gMapGroup_IndoorRoute16",
+    "gMapGroup_IndoorRoute18",
+    "gMapGroup_IndoorRoute22"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -92,7 +105,45 @@
     "Underwater_Route128",
     "Underwater_Route129",
     "Underwater_Route105",
-    "Underwater_Route125"
+    "Underwater_Route125",
+    "PuebloPaleta",
+    "CiudadVerde",
+    "CiudadPlateada",
+    "CiudadCeleste",
+    "PuebloLavanda",
+    "CiudadCarmin",
+    "CiudadAzulona",
+    "CiudadFucsia",
+    "IslaCanela",
+    "MesetaAil_Exterior",
+    "CiudadAzafran_Conexion",
+    "CiudadAzafran",
+    "Ruta1",
+    "Ruta2",
+    "Ruta3",
+    "Ruta4",
+    "Ruta5",
+    "Ruta6",
+    "Ruta7",
+    "Ruta8",
+    "Ruta9",
+    "Ruta10",
+    "Ruta11",
+    "Ruta12",
+    "Ruta13",
+    "Ruta14",
+    "Ruta15",
+    "Ruta16",
+    "Ruta17",
+    "Ruta18",
+    "Ruta19",
+    "Ruta20",
+    "Ruta21_Sur",
+    "Ruta21_Norte",
+    "Ruta22",
+    "Ruta23",
+    "Ruta24",
+    "Ruta25"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -429,7 +480,21 @@
     "TerraCave_Entrance",
     "TerraCave_End",
     "AlteringCave",
-    "MeteorFalls_StevensCave"
+    "MeteorFalls_StevensCave",
+    "BosqueVerde",
+    "MtMoon_S1",
+    "MtMoon_SubS1",
+    "MtMoon_SubS2",
+    "IslasEspuma_S1",
+    "IslasEspuma_SubS1",
+    "IslasEspuma_SubS2",
+    "IslasEspuma_SubS3",
+    "IslasEspuma_SubS4",
+    "TunelRoca_S1",
+    "TunelRoca_SubS1",
+    "CalleVictoriaKanto_S1",
+    "CalleVictoriaKanto_S2",
+    "CalleVictoriaKanto_S3"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",
@@ -621,71 +686,56 @@
   "gMapGroup_IndoorRoute124": [
     "Route124_DivingTreasureHuntersHouse"
   ],
-  "connections_include_order": [
-    "LittlerootTown",
-    "OldaleTown",
-    "DewfordTown",
-    "LavaridgeTown",
-    "FallarborTown",
-    "VerdanturfTown",
-    "PacifidlogTown",
-    "PetalburgCity",
-    "SlateportCity",
-    "MauvilleCity",
-    "RustboroCity",
-    "FortreeCity",
-    "LilycoveCity",
-    "MossdeepCity",
-    "SootopolisCity",
-    "EverGrandeCity",
-    "Route101",
-    "Route102",
-    "Route103",
-    "Route104",
-    "Route105",
-    "Route106",
-    "Route107",
-    "Route108",
-    "Route109",
-    "Route110",
-    "Route111",
-    "Route112",
-    "Route113",
-    "Route114",
-    "Route115",
-    "Route116",
-    "Route117",
-    "Route118",
-    "Route119",
-    "Route120",
-    "Route121",
-    "Route122",
-    "Route123",
-    "Route124",
-    "Route125",
-    "Route126",
-    "Route127",
-    "Route128",
-    "Route129",
-    "Route130",
-    "Route131",
-    "Route132",
-    "Route133",
-    "Route134",
-    "Underwater_Route105",
-    "Underwater_Route124",
-    "Underwater_Route125",
-    "Underwater_Route126",
-    "Underwater_Route127",
-    "Underwater_Route128",
-    "Underwater_Route129",
-    "SafariZone_Northwest",
-    "SafariZone_North",
-    "SafariZone_Southwest",
-    "SafariZone_South",
-    "SafariZone_Northeast",
-    "SafariZone_Southeast",
-    "BattleFrontier_OutsideWest",
-    "BattleFrontier_OutsideEast"
+  "gMapGroup_IndoorPallet": [
+    "PuebloPaleta_CasaDeRojo_S1",
+    "PuebloPaleta_CasaDeRojo_S2",
+    "PuebloPaleta_LabDelProfOak",
+    "PuebloPaleta_CasaDeRival"
+  ],
+  "gMapGroup_IndoorViridian": [
+    "CiudadVerde_Casa",
+    "CiudadVerde_Escuela",
+    "CiudadVerde_CentroPokemon",
+    "CiudadVerde_TiendaPokemon"
+  ],
+  "gMapGroup_IndoorRoute2": [
+    "Ruta2_EntradaSur_BosqueVerde",
+    "Ruta2_EntradaNorte_BosqueVerde",
+    "Ruta2_CasetaEste"
+  ],
+  "gMapGroup_IndoorRoute5": [
+    "Ruta5_EntradaSur"
+  ],
+  "gMapGroup_IndoorRoute6": [
+    "Ruta6_EntradaNorte"
+  ],
+  "gMapGroup_IndoorRoute7": [
+    "Ruta7_EntradaEste"
+  ],
+  "gMapGroup_IndoorRoute8": [
+    "Ruta8_EntradaOeste"
+  ],
+  "gMapGroup_IndoorRoute11": [
+    "Ruta11_EntradaEste_S1",
+    "Ruta11_EntradaEste_S2"
+  ],
+  "gMapGroup_IndoorRoute12": [
+    "Ruta12_EntradaNorte_S1",
+    "Ruta12_EntradaNorte_S2"
+  ],
+  "gMapGroup_IndoorRoute15": [
+    "Ruta15_EntradaOeste_S1",
+    "Ruta15_EntradaOeste_S2"
+  ],
+  "gMapGroup_IndoorRoute16": [
+    "Ruta16_EntradaNorte_S1",
+    "Ruta16_EntradaNorte_S2"
+  ],
+  "gMapGroup_IndoorRoute18": [
+    "Ruta18_EntradaEste_S1",
+    "Ruta18_EntradaEste_S2"
+  ],
+  "gMapGroup_IndoorRoute22": [
+    "Ruta22_EntradaNorte"
   ]
 }

@@ -54,6 +54,8 @@ struct MapLayout
     /*0x0C*/ const u16 *map;
     /*0x10*/ const struct Tileset *primaryTileset;
     /*0x14*/ const struct Tileset *secondaryTileset;
+    u8 borderWidth;
+    u8 borderHeight;
 };
 
 struct BackupMapLayout
@@ -153,7 +155,8 @@ struct MapHeader
     /* 0x15 */ u8 cave;
     /* 0x16 */ u8 weather;
     /* 0x17 */ u8 mapType;
-    /* 0x18 */ u8 filler_18[2];
+    /* 0x18 */ u8 filler_18;
+    /* 0x19 */ u8 region;
                // fields correspond to the arguments in the map_header_flags macro
     /* 0x1A */ bool8 allowCycling:1;
                bool8 allowEscaping:1; // Escape Rope and Dig

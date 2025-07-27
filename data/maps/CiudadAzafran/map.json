@@ -1,0 +1,90 @@
+{
+  "id": "MAP_CIUDAD_AZAFRAN",
+  "name": "CiudadAzafran",
+  "layout": "LAYOUT_CIUDAD_AZAFRAN",
+  "music": "MUS_RG_PEWTER",
+  "region_map_section": "MAPSEC_SAFFRON_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_CITY",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_RUTA5",
+      "offset": 0,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_RUTA7",
+      "offset": 10,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_RUTA8",
+      "offset": 10,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_RUTA6",
+      "offset": 12,
+      "direction": "down"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 34,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_RUTA5_ENTRADA_SUR",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 35,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_RUTA5_ENTRADA_SUR",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 8,
+      "y": 27,
+      "elevation": 0,
+      "dest_map": "MAP_RUTA7_ENTRADA_ESTE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 58,
+      "y": 27,
+      "elevation": 0,
+      "dest_map": "MAP_RUTA8_ENTRADA_OESTE",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 34,
+      "y": 46,
+      "elevation": 0,
+      "dest_map": "MAP_RUTA6_ENTRADA_NORTE",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 35,
+      "y": 46,
+      "elevation": 0,
+      "dest_map": "MAP_RUTA6_ENTRADA_NORTE",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "id": "MAP_RUTA21_NORTE",
+  "name": "Ruta21_Norte",
+  "layout": "LAYOUT_RUTA21_NORTE",
+  "music": "MUS_RG_ROUTE3",
+  "region_map_section": "MAPSEC_ROUTE_21",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_RUTA21_SUR",
+      "offset": 0,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_PUEBLO_PALETA",
+      "offset": 0,
+      "direction": "up"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

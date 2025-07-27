@@ -39,6 +39,7 @@
 #include "constants/metatile_behaviors.h"
 #include "constants/songs.h"
 #include "constants/trainer_hill.h"
+#include "constants/metatile_behaviors.h"
 
 static EWRAM_DATA u8 sWildEncounterImmunitySteps = 0;
 static EWRAM_DATA u16 sPrevMetatileBehavior = 0;
@@ -279,8 +280,7 @@ static bool8 TryStartInteractionScript(struct MapPosition *position, u16 metatil
         return FALSE;
 
     // Don't play interaction sound for certain scripts.
-    if (script != LittlerootTown_BrendansHouse_2F_EventScript_PC
-     && script != LittlerootTown_MaysHouse_2F_EventScript_PC
+    if (script != PuebloPaleta_CasaDeRojo_S2_EventScript_PC
      && script != SecretBase_EventScript_PC
      && script != SecretBase_EventScript_RecordMixingPC
      && script != SecretBase_EventScript_DollInteract
@@ -891,6 +891,12 @@ static bool8 TryStartWarpEventScript(struct MapPosition *position, u16 metatileB
             DoMossdeepGymWarp();
             return TRUE;
         }
+        if (MetatileBehavior_IsFallWarp(metatileBehavior) == TRUE)
+        {
+            ResetInitialPlayerAvatarState();
+            ScriptContext_SetupScript(EventScript_FallDownHoleMtPyre);
+            return TRUE;
+        }
         DoWarp();
         return TRUE;
     }
@@ -908,6 +914,7 @@ static bool8 IsWarpMetatileBehavior(u16 metatileBehavior)
      && MetatileBehavior_IsAquaHideoutWarp(metatileBehavior) != TRUE
      && MetatileBehavior_IsMtPyreHole(metatileBehavior) != TRUE
      && MetatileBehavior_IsMossdeepGymWarp(metatileBehavior) != TRUE
+     && MetatileBehavior_IsFallWarp(metatileBehavior) != TRUE
      && MetatileBehavior_IsUnionRoomWarp(metatileBehavior) != TRUE)
         return FALSE;
     return TRUE;
@@ -1160,6 +1167,16 @@ int SetCableClubWarp(void)
     MapGridGetMetatileBehaviorAt(position.x, position.y);  //unnecessary
     SetupWarp(&gMapHeader, GetWarpEventAtMapPosition(&gMapHeader, &position), &position);
     return 0;
+}
+
+void HandleBoulderFallThroughHole(struct ObjectEvent * object)
+{
+    if (MapGridGetMetatileBehaviorAt(object->currentCoords.x, object->currentCoords.y) == MB_FALL_WARP)
+    {
+        PlaySE(SE_FALL);
+        RemoveObjectEventByLocalIdAndMap(object->localId, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup);
+        FlagClear(GetBoulderRevealFlagByLocalIdAndMap(object->localId, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup));
+    }
 }
 
 static bool32 TrySetUpWalkIntoSignpostScript(struct MapPosition *position, u32 metatileBehavior, u32 playerDirection)

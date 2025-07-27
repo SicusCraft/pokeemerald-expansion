@@ -260,8 +260,6 @@ BattleScript_ActionWallyThrow:
 	waitstate
 	trainerslidein BS_PLAYER1
 	waitstate
-	printstring STRINGID_YOUTHROWABALLNOWRIGHT
-	waitmessage B_WAIT_TIME_LONG
 	end2
 
 BattleScript_TrainerASlideMsgRet::

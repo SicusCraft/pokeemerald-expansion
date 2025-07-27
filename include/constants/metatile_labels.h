@@ -112,10 +112,10 @@
 #define METATILE_BrendansMaysHouse_MovingBox_Open    0x270
 
 // gTileset_Building
-#define METATILE_Building_PC_Off  0x004
-#define METATILE_Building_PC_On   0x005
-#define METATILE_Building_TV_Off  0x002
-#define METATILE_Building_TV_On   0x003
+#define METATILE_Building_PC_Off  0x062
+#define METATILE_Building_PC_On   0x063
+#define METATILE_Building_TV_Off  0x035
+#define METATILE_Building_TV_On   0x061
 
 // gTileset_Cave
 #define METATILE_Cave_CrackedFloor                       0x22F
@@ -213,8 +213,6 @@
 #define METATILE_General_Door                  0x021
 #define METATILE_General_Door_Contest          0x1DB
 #define METATILE_General_Door_Gym              0x1CD
-#define METATILE_General_Door_PokeCenter       0x061
-#define METATILE_General_Door_PokeMart         0x041
 #define METATILE_General_Grass                 0x001
 #define METATILE_General_Grass_TreeLeft        0x1CE
 #define METATILE_General_Grass_TreeRight       0x1CF
@@ -237,6 +235,7 @@
 #define METATILE_General_SecretBase_TreeRight  0x027
 #define METATILE_General_SecretBase_VineLeft   0x036
 #define METATILE_General_SecretBase_VineRight  0x037
+#define METATILE_General_SlidingSingleDoor     0x062
 #define METATILE_General_TallGrass             0x00D
 #define METATILE_General_TallGrass_TreeLeft    0x1C6
 #define METATILE_General_TallGrass_TreeRight   0x1C7
@@ -248,6 +247,10 @@
 #define METATILE_GenericBuilding_TableEdge               0x2F1
 #define METATILE_GenericBuilding_TrickHouse_Door_Closed  0x21B
 #define METATILE_GenericBuilding_TrickHouse_Stairs_Down  0x219
+
+// gTileset_GenericBuilding1
+#define METATILE_GenericBuilding1_PlayersPCOff  0x28F
+#define METATILE_GenericBuilding1_PlayersPCOn   0x28A
 
 // gTileset_InsideOfTruck
 #define METATILE_InsideOfTruck_DoorClosedFloor_Bottom  0x21D
@@ -387,6 +390,10 @@
 #define METATILE_Pacifidlog_SubmergedLogs_HorizontalRight      0x255
 #define METATILE_Pacifidlog_SubmergedLogs_VerticalBottom       0x262
 #define METATILE_Pacifidlog_SubmergedLogs_VerticalTop          0x25A
+
+// gTileset_PalletTown
+#define METATILE_PalletTown_Door_OaksLab  0x2AC
+#define METATILE_PalletTown_Door_Pallet   0x2A3
 
 // gTileset_Petalburg
 #define METATILE_Petalburg_Door_BirchsLab   0x249
@@ -778,6 +785,9 @@
 // gTileset_Underwater
 #define METATILE_Underwater_FloorShadow  0x228
 #define METATILE_Underwater_RockWall     0x21E
+
+// gTileset_ViridianCity
+#define METATILE_ViridianCity_Door_Viridian  0x299
 
 // Other
 #define METATILE_RSMossdeepGym_RedArrow_Down   0x205

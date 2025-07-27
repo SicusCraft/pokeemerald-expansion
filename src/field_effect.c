@@ -51,8 +51,8 @@ static void PokecenterHealEffect_Init(struct Task *);
 static void PokecenterHealEffect_WaitForBallPlacement(struct Task *);
 static void PokecenterHealEffect_WaitForBallFlashing(struct Task *);
 static void PokecenterHealEffect_WaitForSoundAndEnd(struct Task *);
-static u8 CreatePokecenterMonitorSprite(s16, s16);
-static void SpriteCB_PokecenterMonitor(struct Sprite *);
+static u8 CreatePokecenterMonitorSprite(s32 x, s32 y);
+static void SpriteCB_PokecenterMonitor(struct Sprite *sprite);
 
 static void Task_HallOfFameRecord(u8 taskId);
 static void HallOfFameRecordEffect_Init(struct Task *);
@@ -260,6 +260,8 @@ static const u32 sPokeballGlow_Gfx[] = INCBIN_U32("graphics/field_effects/pics/p
 static const u16 sPokeballGlow_Pal[16] = INCBIN_U16("graphics/field_effects/palettes/pokeball_glow.gbapal");
 static const u32 sPokecenterMonitor0_Gfx[] = INCBIN_U32("graphics/field_effects/pics/pokecenter_monitor/0.4bpp");
 static const u32 sPokecenterMonitor1_Gfx[] = INCBIN_U32("graphics/field_effects/pics/pokecenter_monitor/1.4bpp");
+static const u32 sPokecenterMonitor2_Gfx[] = INCBIN_U32("graphics/field_effects/pics/pokecenter_monitor/2.4bpp");
+static const u32 sPokecenterMonitor3_Gfx[] = INCBIN_U32("graphics/field_effects/pics/pokecenter_monitor/3.4bpp");
 static const u32 sHofMonitorBig_Gfx[] = INCBIN_U32("graphics/field_effects/pics/hof_monitor_big.4bpp");
 static const u8 sHofMonitorSmall_Gfx[] = INCBIN_U8("graphics/field_effects/pics/hof_monitor_small.4bpp");
 static const u16 sHofMonitor_Pal[16] = INCBIN_U16("graphics/field_effects/palettes/hof_monitor.gbapal");
@@ -402,7 +404,9 @@ static const struct SpriteFrameImage sPicTable_PokeballGlow[] =
 static const struct SpriteFrameImage sPicTable_PokecenterMonitor[] =
 {
     obj_frame_tiles(sPokecenterMonitor0_Gfx),
-    obj_frame_tiles(sPokecenterMonitor1_Gfx)
+    obj_frame_tiles(sPokecenterMonitor1_Gfx),
+    obj_frame_tiles(sPokecenterMonitor2_Gfx),
+    obj_frame_tiles(sPokecenterMonitor3_Gfx)
 };
 
 static const struct SpriteFrameImage sPicTable_HofMonitorBig[] =
@@ -509,14 +513,13 @@ static const union AnimCmd sAnim_Static[] =
 
 static const union AnimCmd sAnim_Flicker[] =
 {
-    ANIMCMD_FRAME(.imageValue = 0, .duration = 16),
-    ANIMCMD_FRAME(.imageValue = 1, .duration = 16),
-    ANIMCMD_FRAME(.imageValue = 0, .duration = 16),
-    ANIMCMD_FRAME(.imageValue = 1, .duration = 16),
-    ANIMCMD_FRAME(.imageValue = 0, .duration = 16),
-    ANIMCMD_FRAME(.imageValue = 1, .duration = 16),
-    ANIMCMD_FRAME(.imageValue = 0, .duration = 16),
-    ANIMCMD_FRAME(.imageValue = 1, .duration = 16),
+    ANIMCMD_FRAME(.imageValue = 1, .duration = 5),
+    ANIMCMD_FRAME(.imageValue = 2, .duration = 5),
+    ANIMCMD_FRAME(.imageValue = 3, .duration = 7),
+    ANIMCMD_FRAME(.imageValue = 2, .duration = 5),
+    ANIMCMD_FRAME(.imageValue = 1, .duration = 5),
+    ANIMCMD_FRAME(.imageValue = 0, .duration = 5),
+    ANIMCMD_LOOP(3),
     ANIMCMD_END
 };
 
@@ -547,7 +550,7 @@ static const struct SpriteTemplate sSpriteTemplate_PokecenterMonitor =
 {
     .tileTag = TAG_NONE,
     .paletteTag = FLDEFF_PAL_TAG_GENERAL_0,
-    .oam = &sOam_16x16,
+    .oam = &sOam_32x16,
     .anims = sAnims_Flicker,
     .images = sPicTable_PokecenterMonitor,
     .affineAnims = gDummySpriteAffineAnimTable,
@@ -1040,7 +1043,7 @@ bool8 FldEff_PokecenterHeal(void)
     task->tNumMons = nPokemon;
     task->tFirstBallX = 93;
     task->tFirstBallY = 36;
-    task->tMonitorX = 124;
+    task->tMonitorX = 128;
     task->tMonitorY = 24;
     return FALSE;
 }
@@ -1283,7 +1286,7 @@ static void SpriteCB_PokeballGlow(struct Sprite *sprite)
     }
 }
 
-static u8 CreatePokecenterMonitorSprite(s16 x, s16 y)
+static u8 CreatePokecenterMonitorSprite(s32 x, s32 y)
 {
     u8 spriteId;
     struct Sprite *sprite;
@@ -1291,7 +1294,6 @@ static u8 CreatePokecenterMonitorSprite(s16 x, s16 y)
     sprite = &gSprites[spriteId];
     sprite->oam.priority = 2;
     sprite->invisible = TRUE;
-    SetSubspriteTables(sprite, &sSubspriteTable_PokecenterMonitor);
     return spriteId;
 }
 
@@ -3025,7 +3027,14 @@ u8 FldEff_UseSurf(void)
     u8 taskId = CreateTask(Task_SurfFieldEffect, 0xff);
     gTasks[taskId].tMonId = gFieldEffectArguments[0];
     Overworld_ClearSavedMusic();
+    if (REGION_KANTO)
+    {
+    Overworld_ChangeMusicTo(MUS_RG_SURF);
+    }
+    else if (REGION_HOENN)
+    {
     Overworld_ChangeMusicTo(MUS_SURF);
+    }
     return FALSE;
 }
 

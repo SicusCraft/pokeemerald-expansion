@@ -95,6 +95,7 @@ struct RegionMapLocation
 // Exported ROM declarations
 void InitRegionMapData(struct RegionMap *regionMap, const struct BgTemplate *template, bool8 zoomed);
 bool8 LoadRegionMapGfx(void);
+bool8 LoadKantoRegionMapGfx(void);
 void UpdateRegionMapVideoRegs(void);
 void InitRegionMap(struct RegionMap *regionMap, u8 argument);
 u8 DoRegionMapInputCallback(void);
@@ -121,5 +122,6 @@ u32 FilterFlyDestination(struct RegionMap* regionMap);
 void SetFlyDestination(struct RegionMap* regionMap);
 
 extern const struct RegionMapLocation gRegionMapEntries[];
+extern const struct RegionMapLocation gKantoRegionMapEntries[];
 
 #endif //GUARD_REGION_MAP_H

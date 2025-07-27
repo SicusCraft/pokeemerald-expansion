@@ -42178,3 +42178,96 @@ F_TRAINER_FEMALE |
             },
         },
     },
+#line 16877
+    [DIFFICULTY_NORMAL][TRAINER_BLUE] =
+    {
+#line 16878
+        .trainerName = _("Azul"),
+#line 16879
+        .trainerClass = TRAINER_CLASS_RIVAL,
+#line 16880
+        .trainerPic = TRAINER_PIC_BLUE_EARLY,
+        .encounterMusic_gender =
+#line 16882
+            TRAINER_ENCOUNTER_MUSIC_BLUE,
+#line 16883
+        .doubleBattle = FALSE,
+        .partySize = 2,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 16885
+            .species = SPECIES_SQUIRTLE,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16887
+            .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
+#line 16886
+            .lvl = 5,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+            {
+#line 16889
+            .species = SPECIES_EEVEE,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16891
+            .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
+#line 16890
+            .lvl = 5,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+        },
+    },
+#line 16893
+    [DIFFICULTY_NORMAL][TRAINER_BLUE_RUTA_22] =
+    {
+#line 16894
+        .trainerName = _("Azul"),
+#line 16895
+        .trainerClass = TRAINER_CLASS_RIVAL,
+#line 16896
+        .trainerPic = TRAINER_PIC_BLUE_EARLY,
+        .encounterMusic_gender =
+#line 16898
+            TRAINER_ENCOUNTER_MUSIC_BLUE,
+#line 16899
+        .doubleBattle = FALSE,
+        .partySize = 3,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 16901
+            .species = SPECIES_SQUIRTLE,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16903
+            .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
+#line 16902
+            .lvl = 9,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+            {
+#line 16905
+            .species = SPECIES_EEVEE,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16907
+            .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
+#line 16906
+            .lvl = 8,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+            {
+#line 16909
+            .species = SPECIES_PIDGEY,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16911
+            .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
+#line 16910
+            .lvl = 9,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+        },
+    },

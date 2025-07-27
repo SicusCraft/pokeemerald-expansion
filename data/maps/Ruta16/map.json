@@ -1,0 +1,66 @@
+{
+  "id": "MAP_RUTA16",
+  "name": "Ruta16",
+  "layout": "LAYOUT_RUTA16",
+  "music": "MUS_RG_ROUTE3",
+  "region_map_section": "MAPSEC_ROUTE_16",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_CIUDAD_AZULONA",
+      "offset": -10,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_RUTA17",
+      "offset": 0,
+      "direction": "down"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 27,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_RUTA16_ENTRADA_NORTE_S1",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 20,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_RUTA16_ENTRADA_NORTE_S1",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 27,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_RUTA16_ENTRADA_NORTE_S1",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 20,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_RUTA16",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

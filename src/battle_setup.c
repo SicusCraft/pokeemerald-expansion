@@ -69,6 +69,7 @@ static void TryUpdateGymLeaderRematchFromTrainer(void);
 static void CB2_GiveStarter(void);
 static void CB2_StartFirstBattle(void);
 static void CB2_EndFirstBattle(void);
+static bool8 BattleHasNoWhiteout(void);
 static void SaveChangesToPlayerParty(void);
 static void HandleBattleVariantEndParty(void);
 static void CB2_EndTrainerBattle(void);
@@ -419,9 +420,9 @@ static void DoBattlePyramidTrainerHillBattle(void)
 }
 
 // Initiates battle where Wally catches Ralts
-void StartWallyTutorialBattle(void)
+void StartOakTutorialBattle(void)
 {
-    CreateMaleMon(&gEnemyParty[0], SPECIES_RALTS, 5);
+    CreateMaleMon(&gEnemyParty[0], SPECIES_PIKACHU, 5);
     LockPlayerFieldControls();
     gMain.savedCallback = CB2_ReturnToFieldContinueScriptPlayMapMusic;
     gBattleTypeFlags = BATTLE_TYPE_WALLY_TUTORIAL;
@@ -1004,12 +1005,14 @@ const u8 *BattleSetup_ConfigureTrainerBattle(const u8 *data)
 {
     switch (TRAINER_BATTLE_PARAM.mode)
     {
+    case TRAINER_BATTLE_NO_INTRO_NO_WHITEOUT:
     case TRAINER_BATTLE_SINGLE_NO_INTRO_TEXT:
         return EventScript_DoNoIntroTrainerBattle;
     case TRAINER_BATTLE_DOUBLE:
         SetMapVarsToTrainerA();
         return EventScript_TryDoDoubleTrainerBattle;
     case TRAINER_BATTLE_CONTINUE_SCRIPT:
+    case TRAINER_BATTLE_NO_WHITEOUT_CONTINUE_SCRIPT:
         if (gApproachingTrainerId == 0)
         {
             SetMapVarsToTrainerA();
@@ -1212,6 +1215,14 @@ void BattleSetup_StartTrainerBattle(void)
     ScriptContext_Stop();
 }
 
+static bool8 BattleHasNoWhiteout()
+{
+    if (TRAINER_BATTLE_PARAM.mode == TRAINER_BATTLE_NO_WHITEOUT_CONTINUE_SCRIPT || TRAINER_BATTLE_PARAM.mode == TRAINER_BATTLE_NO_INTRO_NO_WHITEOUT)
+        return TRUE;
+    else
+        return FALSE;
+}
+
 void BattleSetup_StartTrainerBattle_Debug(void)
 {
     sNoOfPossibleTrainerRetScripts = gNoOfApproachingTrainers;
@@ -1259,7 +1270,7 @@ static void CB2_EndTrainerBattle(void)
     }
     else if (IsPlayerDefeated(gBattleOutcome) == TRUE)
     {
-        if (InBattlePyramid() || InTrainerHillChallenge() || (!NoAliveMonsForPlayer()))
+        if (InBattlePyramid() || InTrainerHillChallenge() || BattleHasNoWhiteout() || (!NoAliveMonsForPlayer()))
             SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
         else
             SetMainCallback2(CB2_WhiteOut);
@@ -1420,6 +1431,9 @@ void PlayTrainerEncounterMusic(void)
             break;
         case TRAINER_ENCOUNTER_MUSIC_RICH:
             music = MUS_ENCOUNTER_RICH;
+            break;
+        case TRAINER_ENCOUNTER_MUSIC_BLUE:
+            music = MUS_RG_ENCOUNTER_RIVAL;
             break;
         default:
             music = MUS_ENCOUNTER_SUSPICIOUS;

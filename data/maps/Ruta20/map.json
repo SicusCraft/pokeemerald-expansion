@@ -1,0 +1,52 @@
+{
+  "id": "MAP_RUTA20",
+  "name": "Ruta20",
+  "layout": "LAYOUT_RUTA20",
+  "music": "MUS_RG_ROUTE3",
+  "region_map_section": "MAPSEC_ROUTE_20",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_RUTA19",
+      "offset": -40,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_ISLA_CANELA",
+      "offset": 0,
+      "direction": "left"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 60,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_ISLAS_ESPUMA_S1",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 72,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_ISLAS_ESPUMA_S1",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}
