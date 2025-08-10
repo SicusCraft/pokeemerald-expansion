@@ -1505,6 +1505,7 @@ static void Task_ExitStairs(u8 taskId)
     case 1:
         if (!WaitStairExitMovementFinished(&tSpeedX, &tSpeedY, &tOffsetX, &tOffsetY, &tTimer))
             tState++;
+            MovementType_FollowPlayer_Shadow;
         break;
     }
 }
@@ -1513,6 +1514,7 @@ static void ForceStairsMovement(u32 metatileBehavior, s16 *speedX, s16 *speedY)
 {
     ObjectEventForceSetHeldMovement(&gObjectEvents[gPlayerAvatar.objectEventId], GetWalkInPlaceNormalMovementAction(GetPlayerFacingDirection()));
     GetStairsMovementDirection(metatileBehavior, speedX, speedY);
+    MovementType_FollowPlayer_Shadow;
 }
 #undef tSpeedX
 #undef tSpeedY

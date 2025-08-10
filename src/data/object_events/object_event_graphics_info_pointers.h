@@ -236,6 +236,38 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphir
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphireMay;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lugia;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HoOh;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Frlg_Man;
+//Frlg
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Frlg_Woman1;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Frlg_Woman2;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Frlg_Woman3;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Frlg_FatMan;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Frlg_Scientist;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WorkerF;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Frlg_Boy;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Frlg_Clerk;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Frlg_Youngster;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Frlg_OldMan1;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Frlg_OldManLyingDown;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BaldingMan;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Frlg_LittleGirl;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Frlg_Nurse;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Frlg_Gentleman;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Frlg_Lass;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Frlg_BugCatcher;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CooltrainerM;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CooltrainerF;
+//Frlg_Impotants_Ows
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ProfOak;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Frlg_Mom;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Blue;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Daisy;
+//Frlg_Misc
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pokedex;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TownMap;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CutTree;
+//Pokemon
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Spearow;
 // Begin pokemon event objects
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokeBall;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Follower;
@@ -490,6 +522,34 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_HOOH] =                     &gObjectEventGraphicsInfo_HoOh,
     [OBJ_EVENT_GFX_POKE_BALL] =                &gObjectEventGraphicsInfo_PokeBall,
     [OBJ_EVENT_GFX_OW_MON] =                   &gObjectEventGraphicsInfo_Follower,
+    [OBJ_EVENT_GFX_FRLG_WOMAN_1] =             &gObjectEventGraphicsInfo_Frlg_Woman1,
+    [OBJ_EVENT_GFX_FRLG_WOMAN_2] =             &gObjectEventGraphicsInfo_Frlg_Woman2,
+    [OBJ_EVENT_GFX_FRLG_WOMAN_3] =             &gObjectEventGraphicsInfo_Frlg_Woman3,
+    [OBJ_EVENT_GFX_FRLG_FAT_MAN] =             &gObjectEventGraphicsInfo_Frlg_FatMan,
+    [OBJ_EVENT_GFX_FRLG_SCIENTIST] =           &gObjectEventGraphicsInfo_Frlg_Scientist,
+    [OBJ_EVENT_GFX_WORKER_F] =                 &gObjectEventGraphicsInfo_WorkerF,
+    [OBJ_EVENT_GFX_FRLG_BOY] =                 &gObjectEventGraphicsInfo_Frlg_Boy,
+    [OBJ_EVENT_GFX_FRLG_CLERK] =               &gObjectEventGraphicsInfo_Frlg_Clerk,
+    [OBJ_EVENT_GFX_PROF_OAK] =                 &gObjectEventGraphicsInfo_ProfOak,
+    [OBJ_EVENT_GFX_FRLG_MOM] =                 &gObjectEventGraphicsInfo_Frlg_Mom,
+    [OBJ_EVENT_GFX_BLUE] =                     &gObjectEventGraphicsInfo_Blue,
+    [OBJ_EVENT_GFX_DAISY] =                    &gObjectEventGraphicsInfo_Daisy,
+    [OBJ_EVENT_GFX_FRLG_YOUNGSTER] =           &gObjectEventGraphicsInfo_Frlg_Youngster,
+    [OBJ_EVENT_GFX_FRLG_OLD_MAN_1] =           &gObjectEventGraphicsInfo_Frlg_OldMan1,
+    [OBJ_EVENT_GFX_FRLG_OLD_MAN_LYING_DOWN] =  &gObjectEventGraphicsInfo_Frlg_OldManLyingDown,
+    [OBJ_EVENT_GFX_BALDING_MAN] =              &gObjectEventGraphicsInfo_BaldingMan,
+    [OBJ_EVENT_GFX_FRLG_LITTLE_GIRL] =         &gObjectEventGraphicsInfo_Frlg_LittleGirl,
+    [OBJ_EVENT_GFX_FRLG_NURSE] =               &gObjectEventGraphicsInfo_Frlg_Nurse,
+    [OBJ_EVENT_GFX_FRLG_GENTLEMAN] =           &gObjectEventGraphicsInfo_Frlg_Gentleman,
+    [OBJ_EVENT_GFX_FRLG_LASS] =                &gObjectEventGraphicsInfo_Frlg_Lass,
+    [OBJ_EVENT_GFX_FRLG_BUG_CATCHER] =         &gObjectEventGraphicsInfo_Frlg_BugCatcher,
+    [OBJ_EVENT_GFX_COOLTRAINER_M] =            &gObjectEventGraphicsInfo_CooltrainerM,
+    [OBJ_EVENT_GFX_COOLTRAINER_F] =            &gObjectEventGraphicsInfo_CooltrainerF,
+    [OBJ_EVENT_GFX_FRLG_MAN] =                 &gObjectEventGraphicsInfo_Frlg_Man,
+    [OBJ_EVENT_GFX_POKEDEX] =                  &gObjectEventGraphicsInfo_Pokedex,
+    [OBJ_EVENT_GFX_TOWN_MAP] =                 &gObjectEventGraphicsInfo_TownMap,
+    [OBJ_EVENT_GFX_SPEAROW] =                  &gObjectEventGraphicsInfo_Spearow,
+    [OBJ_EVENT_GFX_CUT_TREE] =                 &gObjectEventGraphicsInfo_CutTree,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

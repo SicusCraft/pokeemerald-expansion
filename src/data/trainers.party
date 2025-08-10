@@ -16873,3 +16873,123 @@ Double Battle: No
 Kyogre
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_BLUE ===
+Name: Azul
+Class: Rival
+Pic: Blue_early
+Gender: Male
+Music: Blue
+Double Battle: No
+
+Squirtle
+Level: 5
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Eevee
+Level: 5
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_BLUE_RUTA_22 ===
+Name: Azul
+Class: Rival
+Pic: Blue_early
+Gender: Male
+Music: Blue
+Double Battle: No
+
+Squirtle
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Eevee
+Level: 8
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Pidgey
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_BUG_CATCHER_RICK ===
+Name: Rick
+Class: Bug Catcher
+Pic: Kanto Bug Catcher
+Gender: Male
+Music: Kanto Male
+Double Battle: No
+
+Weedle
+Level: 6
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Caterpie
+Level: 6
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_BUG_CATCHER_DOUG ===
+Name: Douglas
+Class: Bug Catcher
+Pic: Kanto Bug Catcher
+Gender: Male
+Music: Kanto Male
+Double Battle: No
+
+Weedle
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Kakuna
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Weedle
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_BUG_CATCHER_SAMMY ===
+Name: Samy
+Class: Bug Catcher
+Pic: Kanto Bug Catcher
+Gender: Male
+Music: Kanto Male
+Double Battle: No
+
+Weedle
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_BUG_CATCHER_ANTHONY ===
+Name: Antony
+Class: Bug Catcher
+Pic: Kanto Bug Catcher
+Gender: Male
+Music: Kanto Male
+Double Battle: No
+
+Caterpie
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Caterpie
+Level: 8
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_BUG_CATCHER_CHARLIE ===
+Name: Charlie
+Class: Bug Catcher
+Pic: Kanto Bug Catcher
+Gender: Male
+Music: Kanto Male
+Double Battle: No
+
+Metapod
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Caterpie
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Metapod
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe

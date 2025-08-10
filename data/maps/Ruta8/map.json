@@ -1,0 +1,55 @@
+{
+  "id": "MAP_RUTA8",
+  "name": "Ruta8",
+  "layout": "LAYOUT_RUTA8",
+  "music": "MUS_RG_ROUTE3",
+  "region_map_section": "MAPSEC_ROUTE_8",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_PUEBLO_LAVANDA",
+      "offset": 0,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_CIUDAD_AZAFRAN_CONEXION",
+      "offset": -10,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_CIUDAD_AZAFRAN_CONEXION",
+      "offset": -10,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_CIUDAD_AZAFRAN",
+      "offset": -10,
+      "direction": "left"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_RUTA8_ENTRADA_OESTE",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

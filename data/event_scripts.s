@@ -1154,3 +1154,174 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
 	.include "data/scripts/dexnav.inc"
+
+	.include "data/maps/PuebloPaleta/scripts.inc"
+
+	.include "data/maps/Ruta1/scripts.inc"
+
+	.include "data/maps/CiudadVerde/scripts.inc"
+
+	.include "data/maps/Ruta22/scripts.inc"
+
+	.include "data/maps/Ruta2/scripts.inc"
+
+	.include "data/maps/Ruta2_EntradaSur_BosqueVerde/scripts.inc"
+
+	.include "data/maps/BosqueVerde/scripts.inc"
+
+	.include "data/maps/Ruta2_EntradaNorte_BosqueVerde/scripts.inc"
+
+	.include "data/maps/Ruta2_CasetaEste/scripts.inc"
+
+	.include "data/maps/CiudadPlateada/scripts.inc"
+
+	.include "data/maps/Ruta3/scripts.inc"
+
+	.include "data/maps/Ruta4/scripts.inc"
+
+	.include "data/maps/MtMoon_S1/scripts.inc"
+
+	.include "data/maps/MtMoon_SubS1/scripts.inc"
+
+	.include "data/maps/MtMoon_SubS2/scripts.inc"
+
+	.include "data/maps/CiudadCeleste/scripts.inc"
+
+	.include "data/maps/Ruta24/scripts.inc"
+
+	.include "data/maps/Ruta25/scripts.inc"
+
+	.include "data/maps/Ruta5/scripts.inc"
+
+	.include "data/maps/Ruta9/scripts.inc"
+
+	.include "data/maps/CiudadAzafran_Conexion/scripts.inc"
+
+	.include "data/maps/CiudadAzafran/scripts.inc"
+
+	.include "data/maps/Ruta5_EntradaSur/scripts.inc"
+
+	.include "data/maps/Ruta7/scripts.inc"
+
+	.include "data/maps/CiudadAzulona/scripts.inc"
+
+	.include "data/maps/Ruta7_EntradaEste/scripts.inc"
+
+	.include "data/maps/Ruta16/scripts.inc"
+
+	.include "data/maps/Ruta17/scripts.inc"
+
+	.include "data/maps/Ruta18/scripts.inc"
+
+	.include "data/maps/Ruta16_EntradaNorte_S1/scripts.inc"
+
+	.include "data/maps/Ruta16_EntradaNorte_S2/scripts.inc"
+
+	.include "data/maps/Ruta18_EntradaEste_S1/scripts.inc"
+
+	.include "data/maps/Ruta18_EntradaEste_S2/scripts.inc"
+
+	.include "data/maps/CiudadFucsia/scripts.inc"
+
+	.include "data/maps/Ruta19/scripts.inc"
+
+	.include "data/maps/Ruta20/scripts.inc"
+
+	.include "data/maps/IslasEspuma_S1/scripts.inc"
+
+	.include "data/maps/IslasEspuma_SubS1/scripts.inc"
+
+	.include "data/maps/IslasEspuma_SubS2/scripts.inc"
+
+	.include "data/maps/IslasEspuma_SubS3/scripts.inc"
+
+	.include "data/maps/IslasEspuma_SubS4/scripts.inc"
+
+	.include "data/maps/IslaCanela/scripts.inc"
+
+	.include "data/maps/Ruta21_Sur/scripts.inc"
+
+	.include "data/maps/Ruta21_Norte/scripts.inc"
+
+	.include "data/maps/Ruta15/scripts.inc"
+
+	.include "data/maps/Ruta15_EntradaOeste_S1/scripts.inc"
+
+	.include "data/maps/Ruta14/scripts.inc"
+
+	.include "data/maps/Ruta13/scripts.inc"
+
+	.include "data/maps/Ruta12/scripts.inc"
+
+	.include "data/maps/PuebloLavanda/scripts.inc"
+
+	.include "data/maps/Ruta15_EntradaOeste_S2/scripts.inc"
+
+	.include "data/maps/Ruta12_EntradaNorte_S1/scripts.inc"
+
+	.include "data/maps/Ruta12_EntradaNorte_S2/scripts.inc"
+
+	.include "data/maps/Ruta8/scripts.inc"
+
+	.include "data/maps/Ruta8_EntradaOeste/scripts.inc"
+
+	.include "data/maps/Ruta10/scripts.inc"
+
+	.include "data/maps/TunelRoca_S1/scripts.inc"
+
+	.include "data/maps/TunelRoca_SubS1/scripts.inc"
+
+	.include "data/maps/Ruta11/scripts.inc"
+
+	.include "data/maps/Ruta11_EntradaEste_S1/scripts.inc"
+
+	.include "data/maps/Ruta11_EntradaEste_S2/scripts.inc"
+
+	.include "data/maps/CiudadCarmin/scripts.inc"
+
+	.include "data/maps/Ruta6/scripts.inc"
+
+	.include "data/maps/Ruta6_EntradaNorte/scripts.inc"
+
+	.include "data/maps/Ruta22_EntradaNorte/scripts.inc"
+
+	.include "data/maps/Ruta23/scripts.inc"
+
+
+	.include "data/maps/CalleVictoriaKanto_S1/scripts.inc"
+
+	.include "data/maps/CalleVictoriaKanto_S2/scripts.inc"
+
+	.include "data/maps/CalleVictoriaKanto_S3/scripts.inc"
+
+	.include "data/maps/MesetaAil_Exterior/scripts.inc"
+
+	.include "data/maps/PuebloPaleta_CasaDeRojo_S1/scripts.inc"
+
+	.include "data/maps/PuebloPaleta_CasaDeRojo_S2/scripts.inc"
+
+	.include "data/maps/PuebloPaleta_LabDelProfOak/scripts.inc"
+
+	.include "data/maps/PuebloPaleta_CasaDeRival/scripts.inc"
+
+	.include "data/maps/CiudadVerde_Casa/scripts.inc"
+
+	.include "data/maps/CiudadVerde_Escuela/scripts.inc"
+
+	.include "data/maps/CiudadVerde_CentroPokemon/scripts.inc"
+
+	.include "data/maps/CiudadVerde_TiendaPokemon/scripts.inc"
+
+	.include "data/maps/CiudadPlateada_Casa1/scripts.inc"
+
+	.include "data/maps/CiudadPlateada_Casa2/scripts.inc"
+
+	.include "data/maps/CiudadPlateada_CentroPokemon/scripts.inc"
+
+	.include "data/maps/CiudadPlateada_TiendaPokemon/scripts.inc"
+
+	.include "data/maps/CiudadPlateada_Museo_S1/scripts.inc"
+
+	.include "data/maps/CiudadPlateada_Museo_S2/scripts.inc"
+
+	.include "data/maps/CiudadPlateada_Gimnasio/scripts.inc"

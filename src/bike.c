@@ -1005,8 +1005,16 @@ void GetOnOffBike(u8 transitionFlags)
     else
     {
         SetPlayerAvatarTransitionFlags(transitionFlags);
+        if (REGION_KANTO)
+        {
+        Overworld_SetSavedMusic(MUS_RG_CYCLING);
+        Overworld_ChangeMusicTo(MUS_RG_CYCLING);
+        }
+        else if (REGION_HOENN)
+        {
         Overworld_SetSavedMusic(MUS_CYCLING);
         Overworld_ChangeMusicTo(MUS_CYCLING);
+        }
     }
 }
 

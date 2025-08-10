@@ -1,0 +1,274 @@
+{
+  "id": "MAP_BOSQUE_VERDE",
+  "name": "BosqueVerde",
+  "layout": "LAYOUT_BOSQUE_VERDE",
+  "music": "MUS_RG_VIRIDIAN_FOREST",
+  "region_map_section": "MAPSEC_VIRIDIAN_FOREST",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FRLG_BUG_CATCHER",
+      "x": 29,
+      "y": 58,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BosqueVerde_EventScript_Joven",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FRLG_BOY",
+      "x": 45,
+      "y": 58,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BosqueVerde_EventScript_Chico",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FRLG_BUG_CATCHER",
+      "x": 47,
+      "y": 45,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "5",
+      "script": "BosqueVerde_EventScript_Rick",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FRLG_BUG_CATCHER",
+      "x": 47,
+      "y": 29,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "BosqueVerde_EventScript_Doug",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 40,
+      "y": 21,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_ANTIDOTE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_HIDE_VIRIDIAN_FOREST_ANTIDOTE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FRLG_BUG_CATCHER",
+      "x": 43,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "BosqueVerde_EventScript_Antony",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FRLG_BUG_CATCHER",
+      "x": 16,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BosqueVerde_EventScript_Charlie",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_FRLG_BUG_CATCHER",
+      "x": 7,
+      "y": 22,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "BosqueVerde_EventScript_Samy",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 21,
+      "y": 34,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_POTION",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_HIDE_VIRIDIAN_FOREST_POTION"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 5,
+      "y": 41,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_POKE_BALL",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_HIDE_VIRIDIAN_FOREST_POKE_BALL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 49,
+      "y": 60,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_POTION",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_HIDE_VIRIDIAN_FOREST_POTION_2"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 28,
+      "y": 62,
+      "elevation": 0,
+      "dest_map": "MAP_RUTA2_ENTRADA_SUR_BOSQUE_VERDE",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 30,
+      "y": 62,
+      "elevation": 0,
+      "dest_map": "MAP_BOSQUE_VERDE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 29,
+      "y": 62,
+      "elevation": 0,
+      "dest_map": "MAP_RUTA2_ENTRADA_SUR_BOSQUE_VERDE",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 4,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_RUTA2_ENTRADA_NORTE_BOSQUE_VERDE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_RUTA2_ENTRADA_NORTE_BOSQUE_VERDE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 6,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_RUTA2_ENTRADA_NORTE_BOSQUE_VERDE",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 28,
+      "y": 57,
+      "elevation": 0,
+      "item": "ITEM_ANTIDOTE",
+      "flag": "FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_ANTIDOTE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 3,
+      "y": 22,
+      "elevation": 0,
+      "item": "ITEM_ANTIDOTE",
+      "flag": "FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_POTION"
+    },
+    {
+      "type": "sign",
+      "x": 31,
+      "y": 60,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BosqueVerde_EventScript_PistasEntrenador_5"
+    },
+    {
+      "type": "sign",
+      "x": 39,
+      "y": 59,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BosqueVerde_EventScript_PistasEntrenador_1"
+    },
+    {
+      "type": "sign",
+      "x": 28,
+      "y": 44,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BosqueVerde_EventScript_PistasEntrenador_2"
+    },
+    {
+      "type": "sign",
+      "x": 43,
+      "y": 26,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BosqueVerde_EventScript_PistasEntrenador_3"
+    },
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 29,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BosqueVerde_EventScript_PistasEntrenador_4"
+    },
+    {
+      "type": "sign",
+      "x": 6,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "BosqueVerde_EventScript_Salida"
+    }
+  ]
+}

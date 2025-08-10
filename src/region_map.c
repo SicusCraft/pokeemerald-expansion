@@ -122,6 +122,12 @@ static const u32 sRegionMapCursorLargeGfxLZ[] = INCBIN_U32("graphics/pokenav/reg
 static const u16 sRegionMapBg_Pal[] = INCBIN_U16("graphics/pokenav/region_map/map.gbapal");
 static const u32 sRegionMapBg_GfxLZ[] = INCBIN_U32("graphics/pokenav/region_map/map.8bpp.lz");
 static const u32 sRegionMapBg_TilemapLZ[] = INCBIN_U32("graphics/pokenav/region_map/map.bin.lz");
+
+//Kanto
+static const u16 sRegionMapKantoBg_Pal[] 		= INCBIN_U16("graphics/pokenav/region_map/map_kanto.gbapal");
+static const u32 sRegionMapKantoBg_GfxLZ[] 		= INCBIN_U32("graphics/pokenav/region_map/map_kanto.8bpp.lz");
+static const u32 sRegionMapKantoBg_TilemapLZ[] 	= INCBIN_U32("graphics/pokenav/region_map/map_kanto.bin.lz");
+
 static const u16 sRegionMapPlayerIcon_BrendanPal[] = INCBIN_U16("graphics/pokenav/region_map/brendan_icon.gbapal");
 static const u8 sRegionMapPlayerIcon_BrendanGfx[] = INCBIN_U8("graphics/pokenav/region_map/brendan_icon.4bpp");
 static const u16 sRegionMapPlayerIcon_MayPal[] = INCBIN_U16("graphics/pokenav/region_map/may_icon.gbapal");
@@ -129,6 +135,7 @@ static const u8 sRegionMapPlayerIcon_MayGfx[] = INCBIN_U8("graphics/pokenav/regi
 
 #include "data/region_map/region_map_layout.h"
 #include "data/region_map/region_map_entries.h"
+#include "data/region_map/region_map_layout_kanto.h"
 
 static const u16 sRegionMap_SpecialPlaceLocations[][2] =
 {
@@ -508,7 +515,12 @@ static const struct SpriteTemplate sFlyDestIconSpriteTemplate =
 void InitRegionMap(struct RegionMap *regionMap, bool8 zoomed)
 {
     InitRegionMapData(regionMap, NULL, zoomed);
-    while (LoadRegionMapGfx());
+	if(gMapHeader.region == REGION_HOENN){
+		while (LoadRegionMapGfx());
+	}
+	else if(gMapHeader.region == REGION_KANTO){
+		while (LoadKantoRegionMapGfx());
+	}
 }
 
 void InitRegionMapData(struct RegionMap *regionMap, const struct BgTemplate *template, bool8 zoomed)
@@ -565,6 +577,85 @@ bool8 LoadRegionMapGfx(void)
     case 2:
         if (!FreeTempTileDataBuffersIfPossible())
             LoadPalette(sRegionMapBg_Pal, BG_PLTT_ID(7), 3 * PLTT_SIZE_4BPP);
+        break;
+    case 3:
+        LZ77UnCompWram(sRegionMapCursorSmallGfxLZ, sRegionMap->cursorSmallImage);
+        break;
+    case 4:
+        LZ77UnCompWram(sRegionMapCursorLargeGfxLZ, sRegionMap->cursorLargeImage);
+        break;
+    case 5:
+        InitMapBasedOnPlayerLocation();
+        sRegionMap->playerIconSpritePosX = sRegionMap->cursorPosX;
+        sRegionMap->playerIconSpritePosY = sRegionMap->cursorPosY;
+        sRegionMap->mapSecId = CorrectSpecialMapSecId_Internal(sRegionMap->mapSecId);
+        sRegionMap->mapSecType = GetMapsecType(sRegionMap->mapSecId);
+        GetMapName(sRegionMap->mapSecName, sRegionMap->mapSecId, MAP_NAME_LENGTH);
+        break;
+    case 6:
+        if (sRegionMap->zoomed == FALSE)
+        {
+            CalcZoomScrollParams(0, 0, 0, 0, 0x100, 0x100, 0);
+        }
+        else
+        {
+            sRegionMap->scrollX = sRegionMap->cursorPosX * 8 - 0x34;
+            sRegionMap->scrollY = sRegionMap->cursorPosY * 8 - 0x44;
+            sRegionMap->zoomedCursorPosX = sRegionMap->cursorPosX;
+            sRegionMap->zoomedCursorPosY = sRegionMap->cursorPosY;
+            CalcZoomScrollParams(sRegionMap->scrollX, sRegionMap->scrollY, 0x38, 0x48, 0x80, 0x80, 0);
+        }
+        break;
+    case 7:
+        GetPositionOfCursorWithinMapSec();
+        UpdateRegionMapVideoRegs();
+        sRegionMap->cursorSprite = NULL;
+        sRegionMap->playerIconSprite = NULL;
+        sRegionMap->cursorMovementFrameCounter = 0;
+        sRegionMap->blinkPlayerIcon = FALSE;
+        if (sRegionMap->bgManaged)
+        {
+            SetBgAttribute(sRegionMap->bgNum, BG_ATTR_SCREENSIZE, 2);
+            SetBgAttribute(sRegionMap->bgNum, BG_ATTR_CHARBASEINDEX, sRegionMap->charBaseIdx);
+            SetBgAttribute(sRegionMap->bgNum, BG_ATTR_MAPBASEINDEX, sRegionMap->mapBaseIdx);
+            SetBgAttribute(sRegionMap->bgNum, BG_ATTR_WRAPAROUND, 1);
+            SetBgAttribute(sRegionMap->bgNum, BG_ATTR_PALETTEMODE, 1);
+        }
+        sRegionMap->initStep++;
+        return FALSE;
+    default:
+        return FALSE;
+    }
+    sRegionMap->initStep++;
+    return TRUE;
+}
+
+bool8 LoadKantoRegionMapGfx(void)
+{
+    switch (sRegionMap->initStep)
+    {
+    case 0:
+        if (sRegionMap->bgManaged)
+            DecompressAndCopyTileDataToVram(sRegionMap->bgNum, sRegionMapKantoBg_GfxLZ, 0, 0, 0);
+        else
+			LZ77UnCompVram(sRegionMapKantoBg_GfxLZ, (u16 *)BG_CHAR_ADDR(2));
+        break;
+    case 1:
+        if (sRegionMap->bgManaged)
+        {
+			if (!FreeTempTileDataBuffersIfPossible())
+                DecompressAndCopyTileDataToVram(sRegionMap->bgNum, sRegionMapKantoBg_TilemapLZ, 0, 0, 1);
+        }
+        else
+        {
+            //LZ77UnCompVram(sRegionMapBg_TilemapLZ, (u16 *)BG_SCREEN_ADDR(28));
+			LZ77UnCompVram(sRegionMapKantoBg_TilemapLZ, (u16 *)BG_SCREEN_ADDR(28));
+        }
+        break;
+    case 2:
+        if (!FreeTempTileDataBuffersIfPossible())
+            LoadPalette(sRegionMapKantoBg_Pal, 0x70, 0x60);
+			//LoadPalette(sRegionMapBg_Pal, 0x70, 0x60);
         break;
     case 3:
         LZ77UnCompWram(sRegionMapCursorSmallGfxLZ, sRegionMap->cursorSmallImage);
@@ -970,7 +1061,10 @@ static u16 GetMapSecIdAt(u16 x, u16 y)
     }
     y -= MAPCURSOR_Y_MIN;
     x -= MAPCURSOR_X_MIN;
-    return sRegionMap_MapSectionLayout[y][x];
+	if(gMapHeader.region == REGION_HOENN)
+		return sRegionMap_MapSectionLayout[y][x];
+	else
+		return sRegionMap_MapSectionLayout_Kanto[y][x];
 }
 
 static void InitMapBasedOnPlayerLocation(void)

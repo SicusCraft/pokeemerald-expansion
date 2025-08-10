@@ -1,0 +1,41 @@
+{
+  "id": "MAP_CIUDAD_PLATEADA_MUSEO_S1",
+  "name": "CiudadPlateada_Museo_S1",
+  "layout": "LAYOUT_CIUDAD_PLATEADA_MUSEO_S1",
+  "music": "MUS_RG_PEWTER",
+  "region_map_section": "MAPSEC_PEWTER_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 14,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_CIUDAD_PLATEADA",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_CIUDAD_PLATEADA_MUSEO_S1",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

@@ -358,7 +358,12 @@ u32 FldEff_Shadow(void)
         #else
         gSprites[spriteId].sYOffset = (graphicsInfo->height >> 1) - gShadowVerticalOffsets[graphicsInfo->shadowSize];
         #endif
+        gSprites[spriteId].oam.objMode = ST_OAM_OBJ_BLEND;
     }
+    
+    SetGpuReg(REG_OFFSET_DISPCNT, 0x1F40);
+    SetGpuReg(REG_OFFSET_BLDALPHA, 0x0A10);
+
     return 0;
 }
 
