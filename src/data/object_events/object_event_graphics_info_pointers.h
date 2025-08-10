@@ -271,6 +271,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Spearow;
 // Begin pokemon event objects
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokeBall;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Follower;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BallLight;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bard;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Hipster;
@@ -520,6 +521,30 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_LINK_RS_MAY] =              &gObjectEventGraphicsInfo_RubySapphireMay,
     [OBJ_EVENT_GFX_LUGIA] =                    &gObjectEventGraphicsInfo_Lugia,
     [OBJ_EVENT_GFX_HOOH] =                     &gObjectEventGraphicsInfo_HoOh,
+    [OBJ_EVENT_GFX_FRLG_WOMAN_1] =             &gObjectEventGraphicsInfo_Frlg_Woman1,
+    [OBJ_EVENT_GFX_FRLG_WOMAN_2] =             &gObjectEventGraphicsInfo_Frlg_Woman2,
+    [OBJ_EVENT_GFX_FRLG_WOMAN_3] =             &gObjectEventGraphicsInfo_Frlg_Woman3,
+    [OBJ_EVENT_GFX_FRLG_FAT_MAN] =             &gObjectEventGraphicsInfo_Frlg_FatMan,
+    [OBJ_EVENT_GFX_FRLG_SCIENTIST] =           &gObjectEventGraphicsInfo_Frlg_Scientist,
+    [OBJ_EVENT_GFX_WORKER_F] =                 &gObjectEventGraphicsInfo_WorkerF,
+    [OBJ_EVENT_GFX_FRLG_BOY] =                 &gObjectEventGraphicsInfo_Frlg_Boy,
+    [OBJ_EVENT_GFX_FRLG_CLERK] =               &gObjectEventGraphicsInfo_Frlg_Clerk,
+    [OBJ_EVENT_GFX_PROF_OAK] =                 &gObjectEventGraphicsInfo_ProfOak,
+    [OBJ_EVENT_GFX_FRLG_MOM] =                 &gObjectEventGraphicsInfo_Frlg_Mom,
+    [OBJ_EVENT_GFX_BLUE] =                     &gObjectEventGraphicsInfo_Blue,
+    [OBJ_EVENT_GFX_DAISY] =                    &gObjectEventGraphicsInfo_Daisy,
+    [OBJ_EVENT_GFX_FRLG_YOUNGSTER] =           &gObjectEventGraphicsInfo_Frlg_Youngster,
+    [OBJ_EVENT_GFX_FRLG_OLD_MAN_1] =           &gObjectEventGraphicsInfo_Frlg_OldMan1,
+    [OBJ_EVENT_GFX_FRLG_OLD_MAN_LYING_DOWN] =  &gObjectEventGraphicsInfo_Frlg_OldManLyingDown,
+    [OBJ_EVENT_GFX_BALDING_MAN] =              &gObjectEventGraphicsInfo_BaldingMan,
+    [OBJ_EVENT_GFX_FRLG_LITTLE_GIRL] =         &gObjectEventGraphicsInfo_Frlg_LittleGirl,
+    [OBJ_EVENT_GFX_FRLG_NURSE] =               &gObjectEventGraphicsInfo_Frlg_Nurse,
+    [OBJ_EVENT_GFX_FRLG_GENTLEMAN] =           &gObjectEventGraphicsInfo_Frlg_Gentleman,
+    [OBJ_EVENT_GFX_FRLG_LASS] =                &gObjectEventGraphicsInfo_Frlg_Lass,
+    [OBJ_EVENT_GFX_POKEDEX] =                  &gObjectEventGraphicsInfo_Pokedex,
+    [OBJ_EVENT_GFX_TOWN_MAP] =                 &gObjectEventGraphicsInfo_TownMap,
+    [OBJ_EVENT_GFX_SPEAROW] =                  &gObjectEventGraphicsInfo_Spearow,
+    [OBJ_EVENT_GFX_CUT_TREE] =                 &gObjectEventGraphicsInfo_CutTree,
     [OBJ_EVENT_GFX_POKE_BALL] =                &gObjectEventGraphicsInfo_PokeBall,
     [OBJ_EVENT_GFX_OW_MON] =                   &gObjectEventGraphicsInfo_Follower,
     [OBJ_EVENT_GFX_FRLG_WOMAN_1] =             &gObjectEventGraphicsInfo_Frlg_Woman1,
